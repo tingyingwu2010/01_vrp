@@ -1,7 +1,9 @@
 import sys
 import pytest
+
 sys.path.append('./src/vrp/')
 import vrp_train as vrp
+
 
 class TestVrpTrain(object):
     def test_sum(self):
