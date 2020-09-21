@@ -1,6 +1,6 @@
 # Vehicle Routing Problem
 
-![Unit Tests](https://github.com/ifm-mag/01_vrp/workflows/Python%20package/badge.svg)
+![PyTest](https://github.com/ifm-mag/01_vrp/workflows/PyTest/badge.svg)
 
 ## Objective
 The objective of this repo is to solve the Vehicle Routing Problem using **established** deep Reinforcement Learning techniques, primarily (Nazari et. al 2018).
