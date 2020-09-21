@@ -27,7 +27,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest pytest-cov gym
-        pip install flake8 pytest gym
+        pip install flake8 pytest gym pandas
         cd src
         pip install -e .
         cd ../
