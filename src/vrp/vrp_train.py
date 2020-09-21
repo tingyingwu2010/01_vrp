@@ -25,7 +25,7 @@ def hello_world():
 def main():
     env = gym.make('vrp-v1')
 
-def summation(a: int, b: int) -> int:
+def summation(a: int, b: str) -> int:
     return a + b
 
 if __name__ == '__main__':
