@@ -26,7 +26,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+<<<<<<< HEAD
         pip install flake8 pytest pytest-cov gym
+=======
+        pip install flake8 pytest gym
+>>>>>>> eb5cd91ed64a4c023b091799e888c4a03d5be932
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
