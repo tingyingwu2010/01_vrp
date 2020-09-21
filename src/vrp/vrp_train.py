@@ -16,7 +16,7 @@ import sys
 import gym
 
 from vrp.envs.vrp_env import VRPEnv
-sys.path.append('../../99_utilities/src')
+sys.path.append('./utilities/')
 import sm_functions as sm
 
 def main():
