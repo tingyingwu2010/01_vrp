@@ -1,28 +1,24 @@
 import os
-import sys
 from shutil import copyfile
 from datetime import datetime
 import time
 import configparser
 import logging
-import re
-from typing import Tuple
 from itertools import product
-from tkinter import Tk, Label, Button
-import gym
 
 import numpy as np
 import pandas as pd
-from scipy.spatial import distance_matrix
 
 def current_timestamp(timestamp=time.localtime()):
     ''' Formats the current time to use as a folder name '''
     return time.strftime('%Y%m%d_%H%M%S', timestamp)
 
+
 def make_dirs(path):
     ''' Makes a folder if it doesn't exist '''
     if not os.path.exists(path):
         os.makedirs(path)
+
 
 def read_config(path):
     ''' Parses the config file '''
@@ -30,6 +26,7 @@ def read_config(path):
     config.read(path)
     
     return config
+
 
 def copy_config(source, destination_folder):
 
@@ -42,6 +39,7 @@ def copy_config(source, destination_folder):
         copyfile(source, destination_path)
         print(f'Successfully copied "config.properties" file to "{destination_path}"')
 
+
 def calculate_distance(origin, destination, method='euclidean'):
     ''' Calculate distance between an origin and destination pair. '''
     # TODO: Calculate reward function that loops through entire state.
@@ -50,6 +48,7 @@ def calculate_distance(origin, destination, method='euclidean'):
     if method == 'euclidean':
         distance = np.linalg.norm(destination[:2] - origin[:2])
     return -1 * distance
+
 
 def generate_runs_folder(flag_save, folder_description, flag_prod,
                          path_save_runs, path_config, path_train,
@@ -84,6 +83,7 @@ def generate_runs_folder(flag_save, folder_description, flag_prod,
         raise ValueError(f"Was unable to make the path {folder_path_full}")
     return folder_path_full
 
+
 def copy_scripts(path_train, path_env, path_policy, folder_path_full):
 
     if not os.path.exists(folder_path_full):
@@ -97,6 +97,7 @@ def copy_scripts(path_train, path_env, path_policy, folder_path_full):
             print(f'Successfully copied "{script_name}" to "{destination}"')
         elif not os.path.exists(script):
             raise ValueError(f"Could not find file {script}")
+            
             
 def save_logs(folder_path_full, flag_save=False,
               flag_print_logs=True, 
@@ -133,6 +134,7 @@ def save_logs(folder_path_full, flag_save=False,
 
     return logger
 
+
 def get_hyperparams(hyperparams):
     
     hyperparam_dict = dict()
@@ -156,6 +158,7 @@ def get_hyperparams(hyperparams):
                 print(f'Trying to convert hyperparameters to boolean, but not working, got {hyperparam[1: ]}')
     
     return hyperparam_dict
+
 
 def init_experimental_design(hyperparams, additional_columns, path_hyperparams,
                              flag_save, agent_seed, env_seed,
@@ -195,6 +198,7 @@ def init_experimental_design(hyperparams, additional_columns, path_hyperparams,
         
     return experimental_design
 
+
 def write_start_experimental_design(experimental_design, combination, n_experiments, path_hyperparams, flag_save):
     
     experiment_start = datetime.now()
@@ -207,6 +211,7 @@ def write_start_experimental_design(experimental_design, combination, n_experime
     
     if flag_save is True:
         experimental_design.to_csv(path_hyperparams, index_label='Index')
+
 
 def write_finish_experimental_design(experimental_design, combination, n_experiments, path_hyperparams, flag_save, logger):
     
@@ -224,6 +229,7 @@ def write_finish_experimental_design(experimental_design, combination, n_experim
     if flag_save is True:
         experimental_design.to_csv(path_hyperparams, index_label='Index')
         
+        
 def copy_files(source, destination):
     dirname = os.path.dirname(destination)
     if not os.path.exists(dirname):
@@ -231,4 +237,3 @@ def copy_files(source, destination):
         
     copyfile(source, destination)
     print(f'Successfully copied from "{source}" to "{destination}"')
-        
