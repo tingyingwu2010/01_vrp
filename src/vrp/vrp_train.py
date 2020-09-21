@@ -16,13 +16,14 @@ import sys
 import gym
 
 from vrp.envs.vrp_env import VRPEnv
-sys.path.append('./utilities/')
+sys.path.append('./utils/')
 import sm_functions as sm
+
+def hello_world():
+    print('hello world')
 
 def main():
     env = gym.make('vrp-v1')
-    print('success!')
-
 
 def summation(a: int, b: int) -> int:
     return a + b
