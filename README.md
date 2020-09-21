@@ -19,6 +19,4 @@ The stretch objective is to improve on this deep RL algorithm.
 
 ## Usage (TO DO)
 
-This repo was developed by Stephen Mak. Contact me if you would like to learn more :) 
-
-test
+This repo was developed by Stephen Mak. Contact me if you would like to learn more :)
