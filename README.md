@@ -26,4 +26,4 @@ Go to `src` and run `pip install -e .` which will identify the relevant files.
 VRPEnv5 is the CVRP problem with 5 destinations, 1 depot and 1 (capacitated vehicle).
 
 
-This repo was developed by Stephen Mak. Contact me if you would like to learn more!! :)
+This repo was developed by Stephen Mak. Contact me if you would like to learn more! :)
