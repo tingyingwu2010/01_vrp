@@ -4,9 +4,7 @@ import gym # type: ignore
 class VRPEnv5(gym.Env):
     """This class replicates the CVRP Environment from (Nazari et. al 2018).
         https://arxiv.org/abs/1802.04240
-    
-    Trying desperately to fix code cov
-        
+            
     Attributes:
         n_destinations (int): An integer indicating number of destinations
     """
