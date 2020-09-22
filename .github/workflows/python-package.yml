@@ -41,9 +41,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Check static typing with mypy
       run: |
-        cd src/vrp
-        mypy vrp_train.py
-        cd ../../
+        mypy src
+        mypy tests
+        mypy utils
     - name: Test with pytest
       run: |
         pytest

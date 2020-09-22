@@ -6,8 +6,8 @@ import configparser
 import logging
 from itertools import product
 
-import numpy as np
-import pandas as pd
+import numpy as np # type: ignore
+import pandas as pd # type: ignore
 
 # def current_timestamp(timestamp=time.localtime()):
 #     ''' Formats the current time to use as a folder name '''

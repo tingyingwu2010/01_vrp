@@ -1,4 +1,5 @@
-import gym
+import numpy as np # type: ignore
+import gym # type: ignore
 
 class VRPEnv(gym.Env):
     """This class replicates the CVRP Environment from (Nazari et. al 2018).
@@ -14,7 +15,7 @@ class VRPEnv(gym.Env):
         super(VRPEnv, self).__init__()
         self.n_destinations = 10
 
-    def step(self, action):
+    def step(self, action: int) -> int:
         """Takes a step using `action`."""
         raise NotImplementedError
 

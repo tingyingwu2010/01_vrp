@@ -1,8 +1,7 @@
 import sys
 import pytest
 
-sys.path.append('./src/vrp/')
-import vrp_train as vrp
+import vrp.vrp_train as vrp # type: ignore
 
 
 class TestVrpTrain(object):

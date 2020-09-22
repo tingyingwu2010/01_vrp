@@ -1,5 +1,5 @@
 from vrp.envs.vrp_env import VRPEnv
-from gym.envs.registration import register
+from gym.envs.registration import register # type: ignore
 
 register(
     id='vrp-v1',
