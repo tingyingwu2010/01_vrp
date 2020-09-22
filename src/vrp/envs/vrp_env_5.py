@@ -1,7 +1,7 @@
 import numpy as np # type: ignore
 import gym # type: ignore
 
-class VRPEnv(gym.Env):
+class VRPEnv5(gym.Env):
     """This class replicates the CVRP Environment from (Nazari et. al 2018).
         https://arxiv.org/abs/1802.04240
         
@@ -12,8 +12,11 @@ class VRPEnv(gym.Env):
 
     def __init__(self):
         """Inits VRPEnv with n_destinations"""
-        super(VRPEnv, self).__init__()
-        self.n_destinations = 10
+        super(VRPEnv5, self).__init__()
+        self.n_destinations = 5
+        self.n_vehicles = 1
+        self.homogeneous = True # Trucks are all homogeneous i.e. the same.
+        self.capacity = 10 # Set arbitrarily high for now.
 
     def step(self, action: int) -> int:
         """Takes a step using `action`."""

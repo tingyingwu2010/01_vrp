@@ -5,9 +5,23 @@ import time
 import configparser
 import logging
 from itertools import product
+import random
 
 import numpy as np # type: ignore
 import pandas as pd # type: ignore
+import tensorflow as tf # type: ignore
+
+def set_seed(seed: int) -> None:
+    try:
+        if seed is not None:
+            random.seed(seed)
+            np.random.seed(seed)
+            tf.random.set_seed(seed)
+        else:
+            raise ValueError(f'Expected an int to set seed, got: {seed} instead')
+    except ValueError as err1:
+        print(err1)
+    
 
 # def current_timestamp(timestamp=time.localtime()):
 #     ''' Formats the current time to use as a folder name '''

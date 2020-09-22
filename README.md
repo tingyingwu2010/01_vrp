@@ -15,8 +15,15 @@ The stretch objective is to improve on this deep RL algorithm.
 
 **Task 2**: (Stretch) Develop a stronger RL algorithm than Task 1
 
-## Installation (TO DO)
+## Installation
+Dependencies:
+
+`Gym, TensorFlow, Pandas, NumPy, PyTest, flake8, mypy`
+
+Go to `src` and run `pip install -e .` which will identify the relevant files.
 
 ## Usage (TO DO)
+VRPEnv5 is the CVRP problem with 5 destinations, 1 depot and 1 (capacitated vehicle).
+
 
 This repo was developed by Stephen Mak. Contact me if you would like to learn more :)

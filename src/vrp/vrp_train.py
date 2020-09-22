@@ -15,12 +15,13 @@ import sys
 
 import gym # type: ignore
 
-from vrp.envs.vrp_env import VRPEnv # type: ignore
+from vrp.envs.vrp_env_5 import VRPEnv5 # type: ignore
 sys.path.append('./utils/')
 import sm_functions as sm # type: ignore
 
 def main():
-    env = gym.make('vrp-v1')
+    env = gym.make('vrp-v5')
+    print(env.n_destinations)
 
 def summation(a: int, b: int) -> int:
     return a + b
