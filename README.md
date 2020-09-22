@@ -1,6 +1,6 @@
 # Vehicle Routing Problem
 
-![PyTest](https://github.com/ifm-mag/01_vrp/workflows/PyTest/badge.svg) [![Coverage](https://codecov.io/gh/ifm-mag/01_vrp/branch/master/graph/badge.svg&service=github)](https://codecov.io/gh/ifm-mag/01_vrp)
+![PyTest](https://github.com/ifm-mag/01_vrp/workflows/PyTest/badge.svg) [![Coverage](https://codecov.io/gh/ifm-mag/01_vrp/branch/master/graph/badge.svg)](https://codecov.io/gh/ifm-mag/01_vrp)
 
 
 ## Objective
