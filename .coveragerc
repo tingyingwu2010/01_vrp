@@ -1,0 +1,10 @@
+[paths]
+source = /home/stephen/01_active/01_vrp/tests/*
+omit = 
+    /home/stephen/anaconda3/envs/rl/lib/python3.6/site-packages/*
+
+[report]
+exclude_lines =
+    if __name__ == .__main__.:
+    def main
+    raise NotImplementedError

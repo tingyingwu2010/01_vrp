@@ -13,14 +13,14 @@ import tensorflow as tf # type: ignore
 
 def set_seed(seed: int) -> None:
     try:
-        if seed is not None:
+        if isinstance(seed, int):
             random.seed(seed)
             np.random.seed(seed)
             tf.random.set_seed(seed)
         else:
             raise ValueError(f'Expected an int to set seed, got: {seed} instead')
     except ValueError as err1:
-        print(err1)
+        raise ValueError(err1)
     
 
 # def current_timestamp(timestamp=time.localtime()):

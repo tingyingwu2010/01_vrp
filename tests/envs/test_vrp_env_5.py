@@ -3,10 +3,7 @@ import gym # type: ignore
 from vrp.envs.vrp_env_5 import VRPEnv5 # type: ignore
 
 
-import sm_functions as sm # type: ignore
-
-def summation(a: int, b: int) -> int:
-    return a + b
+import vrp.utils.sm_functions as sm # type: ignore
 
 class TestVrpEnv(object):
     

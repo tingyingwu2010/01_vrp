@@ -5,8 +5,7 @@ import pytest
 import numpy as np # type: ignore
 import tensorflow as tf # type: ignore
 
-sys.path.append('../utils')
-import sm_functions as sm # type: ignore
+import vrp.utils.sm_functions as sm # type: ignore
 
 class TestSetSeed(object):
     def test_random_set_seed(self):
@@ -27,3 +26,7 @@ class TestSetSeed(object):
         tf_expected = 0.62868404
         
         assert tf_actual == tf_expected, f"Expected: {tf_expected}, got: {tf_actual}"
+
+    def test_str(self):
+        with pytest.raises(ValueError):
+            sm.set_seed('hello world')
